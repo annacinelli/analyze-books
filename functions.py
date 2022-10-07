@@ -206,7 +206,7 @@ def stats_book(file_path, print_stats = False):
 
             # computes and prints out the number of total lines
             total_lines = max(i for i, line in enumerate(file_))
-            print(f'Number of total lines: {total_lines + 1}')
+            print(f'Number of total lines: {total_lines + 1}\n')
 
 
         with open(file_path, 'r') as file_:
@@ -215,22 +215,22 @@ def stats_book(file_path, print_stats = False):
 
             # computes and prints out the number of total words
             total_words = len(file.split())
-            print(f'Number of total words: {total_words}')
+            print(f'Number of total words: {total_words}\n')
 
             # computes and prints out the number of total characters
             total_characters_whitein = len(file)
-            print(f'Number of total characters: {total_characters_whitein}')
+            print(f'Number of total characters: {total_characters_whitein}\n')
 
             # computes and prints out the number of characters without whitespace
             data = file.replace(" ","")
             total_characters_notwhite = len(data)
-            print(f'Number of characters without whitespace: {total_characters_notwhite}')
+            print(f'Number of characters without whitespace: {total_characters_notwhite}\n')
 
             # computes and prints out a dictionary which keys are the numbers from
             # 0 to 9 and whose values are the total number of times in which that
             # number appears in the the text file
             ascii_dict_numbers = count_function(file, 48, 58)
-            print(f'Dictionary of numbers: {ascii_dict_numbers}')
+            print(f'Dictionary of numbers: {ascii_dict_numbers}\n')
 
             # computes and prints out a dictionary which keys are special characters
             # and whose values are the total number of times in which that character
@@ -238,8 +238,8 @@ def stats_book(file_path, print_stats = False):
             ascii_dict_specialchars = {**count_function(file, 33, 48)[0],
             **count_function(file, 58, 65)[0], **count_function(file, 91, 97)[0],
             **count_function(file, 123, 127)[0]}
-            print(f'Dictionary of specialchars: {ascii_dict_specialchars}')
+            print(f'Dictionary of specialchars: {ascii_dict_specialchars}\n')
 
             # computes and prints out the number of total whitespace
             total_whitespace = file.count(" ")
-            print(f'Number of whitespace: {total_whitespace}')
+            print(f'Number of whitespace: {total_whitespace}\n')
