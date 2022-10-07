@@ -6,6 +6,7 @@
 
 import argparse
 import time
+import test
 import functions as func  # file with the definition of the functions
                           # that are employed in the project
 
@@ -45,6 +46,8 @@ if __name__ == '__main__':
         START_LINE = 0
         END_LINE = 0
 
+    # opens and prints out every line of the text file
+    test.control(args.infile[0])
 
 
     # opens the text file in the read mode
@@ -88,4 +91,4 @@ if __name__ == '__main__':
 
     # computes and prints out the total elapsed time
     total_time = delta_t1 + delta_t2
-    print(f'Total elapsed time: {total_time} s')
+    print(f'Total elapsed time: {total_time} s\n')
